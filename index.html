@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>flavours by sk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2f09ec;
+      --primary-faded: rgba(0, 123, 255, 0.08);
+      --section-bg: #f8fafc;
+      --card-radius: 14px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
+    body { background: var(--section-bg); color: #222; line-height: 1.7; }
+    header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 40px; height: 60px; box-shadow: 0 1px 8px rgba(0,0,0,0.03);
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    nav ul { display: flex; gap: 28px; list-style: none; }
+    nav ul li a {
+      color: #222; text-decoration: none; font-weight: 600; font-size: 1rem;
+      position: relative; transition: color 0.2s;
+    }
+    nav ul li a::after {
+      content: ''; position: absolute; left: 0; bottom: -3px; width: 0; height: 2px;
+      background: var(--primary); transition: width 0.2s;
+    }
+    nav ul li a:hover { color: var(--primary); }
+    nav ul li a:hover::after { width: 100%; }
+    @media (max-width: 768px) { header { display: none; } }
+
+    .hero {
+      margin-top: 80px; min-height: 400px; height: 50vh;
+      background: linear-gradient(rgba(0,0,0,0.5), transparent), linear-gradient(135deg, var(--primary), #0056b3);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; color: #fff; padding: 32px 12px;
+    }
+    .hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; }
+    .hero p { font-size: 1.3rem; margin-bottom: 22px; }
+    .hero .cta {
+      background: rgba(255,255,255,0.2); color: #fff; padding: 12px 28px; border-radius: 6px;
+      font-weight: 600; text-decoration: none; font-size: 1.1rem; transition: background 0.2s;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .hero .cta:hover { background: rgba(255,255,255,0.3); }
+    @media (max-width: 768px) {
+      .hero { min-height: 220px; height: 32vh; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+
+    .about {
+      max-width: 900px; margin: 60px auto 0 auto; padding: 32px 18px 32px 18px;
+      background: #fff; border-radius: var(--card-radius); box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .about h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 28px; color: var(--primary); }
+    .about .content { font-size: 1.08rem; line-height: 1.6; color: #555; }
+    
+    .contact {
+      max-width: 900px; margin: 60px auto 0 auto; padding: 32px 18px;
+      background: #fff; border-radius: var(--card-radius); box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .contact h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 28px; color: var(--primary); }
+    .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .contact-item { padding: 20px; background: var(--section-bg); border-radius: 8px; }
+    .contact-item h3 { color: var(--primary); margin-bottom: 8px; }
+
+    footer {
+      background: #222; color: #fff; padding: 48px 18px 24px 18px;
+      text-align: center; margin-top: 60px;
+    }
+    footer .copyright { margin-top: 18px; font-size: 0.92rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">flavours by sk</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to flavours by sk</h1>
+    <p>Your trusted business partner</p>
+    <a href="#contact" class="cta">Get In Touch</a>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <div class="content">
+      <p>Oliver Brown, Australia’s beloved Belgian Chocolate Café, has brought its passion for rich, authentic Belgian chocolate to India, blending indulgent flavors with the country’s vibrant café culture. From its origins in Australia, where it became renowned for exceptional desserts, beverages, and warm hospitality.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p>silawatsaurav@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <p>+919977008152</p>
+      </div>
+      <div class="contact-item">
+        <h3>Address</h3>
+        <p>ward no.61, Gulabpuri, Badagaon, Morar</p>
+      </div>
+      <div class="contact-item">
+        <h3>Hours</h3>
+        <p>05:49 - 19:51</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="copyright">
+      © 2025 flavours by sk. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
